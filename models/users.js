@@ -1,12 +1,12 @@
 module.exports = function (sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
     id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
     firstName: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: {
@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     lastName: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: {
@@ -26,7 +26,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     email: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     password: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: {
@@ -50,7 +50,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     phoneNumber: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: {
@@ -60,7 +60,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     age: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: {
@@ -69,7 +69,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     gender: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     }
   });
