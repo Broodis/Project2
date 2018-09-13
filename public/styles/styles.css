@@ -6,6 +6,23 @@
   margin-left: 25%;
 }
 
-body {
-  background-color: red;
+.numsearch {
+  width: 75%;
 }
+
+.input-group .custom-file, .input-group .custom-select, .input-group .form-control {
+  width: 100%;
+}
+
+.h2, h2 {
+  margin-left: 25%;
+}
+
+.input-group.mb-3.signup {
+  margin-top: 40%;
+}
+
+p.itsfree {
+  margin-left: 8%;
+}
+
