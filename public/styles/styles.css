@@ -26,3 +26,48 @@ p.itsfree {
   margin-left: 8%;
 }
 
+h1.heading {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 120px;
+}
+
+.navheading {
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(187, 24, 135);
+}
+
+input.numsearch {
+  padding-left: 48px;
+}
+
+.col-sm {
+  padding-top: 17%;
+}
+
+.input-group.mb-3 {
+  margin-top: 38%;
+}
+
+.tagline {
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+a.navbar-brand.navheading {
+  color: rgb(187, 24, 135);
+}
+
+
+
+body{
+    background-image: url("https://www.tapmango.com/wp-content/uploads/2017/10/gradient-background.jpg");
+}
