@@ -10,11 +10,26 @@ module.exports = function(app) {
       });
     });
   });
-
+ //Loads the signup page 
   app.get("/signup", function(req, res) {
       res.render("signup");
     });
   
+    app.get("/socials", function(req, res) {
+      res.render("socials");
+    });
+
+    app.get("/login", function(req, res) {
+      res.render("login");
+    });
+
+    app.get("/", function(req, res) {
+      res.render("index");
+    });
+
+    app.get("/settings", function(req, res) {
+      res.render("settings");
+    });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {

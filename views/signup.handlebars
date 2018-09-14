@@ -5,31 +5,37 @@
         </div>
         <div class="col-sm-4"><div class="input-group mb-3 signup">
                 <form action="/examples/actions/confirmation.php" method="post">
-                    <h2>Sign Up</h2>
-                    <p class="itsfree">It's free and only takes a minute.</p>
+                    <h2 class="signup1">sign up.</h2>
+                    <p class="itsfree">it's free and only takes a minute.</p>
                     <hr>
                     <div class="form-group">
-                        <input type="text" class="form-control width-control" name="username" placeholder="Username" required="required">
+                        <input type="text" class="form-control width-control" name="firstname" placeholder="first name" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
+                        <input type="text" class="form-control width-control" name="lastname" placeholder="last name" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                        <input type="number" class="form-control width-control" name="cellnumber" placeholder="cell phone number" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                        <input type="email" class="form-control" name="email" placeholder="email address" required="required">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                        <input type="password" class="form-control" name="password" placeholder="password" required="required">
                     </div>
-                    <p class="small text-center">By clicking the Sign Up button, you agree to our
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="confirm_password" placeholder="confirm password" required="required">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">sign up</button>
+                    </div>
+                    <p class="small text-center byclicking">by clicking the sign up button, you agree to our
                         <br>
-                        <a href="#">Terms &amp; Conditions</a>, and
-                        <a href="#">Privacy Policy</a>.</p>
+                        <a href="#">terms &amp; conditions</a>, and
+                        <a href="#">privacy policy</a>.</p>
                 </form>
-                <div class="text-center">Already have an account?
-                    <a href="#">Login here</a>
+                <div class="text-center">already have an account?
+                    <a href="/login">login here</a>
                 </div>
             </div></div>
         <div class="col-sm-4">
