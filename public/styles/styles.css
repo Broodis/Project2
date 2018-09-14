@@ -7,7 +7,7 @@
 }
 
 .signup1 {
-  font-size: 60px;
+  font-size: 80px;
   margin-left: 0%;
 }
 
@@ -28,11 +28,16 @@
 }
 
 .input-group.mb-3.signup {
-  margin-top: 40%;
+  margin-top: 8%;
+}
+
+.input-group.mb-3.signup {
+  margin-top: 8%;
 }
 
 p.itsfree {
   margin-left: 0%;
+  font-size: 20px;
 }
 
 h1.heading {
@@ -64,10 +69,6 @@ input.numsearch {
   margin-left: 27%;
 }
 
-.input-group.mb-3.signup {
-  margin-top: 32%;
-  margin-left: 0%;
-}
 
 .tagline {
   font-family: 'Rubik', sans-serif;
@@ -83,8 +84,10 @@ a.navbar-brand.navheading {
 }
 
 p.small.text-center {
-  padding-left: 0px;
-  padding-top: 15px;
+  padding-left: 35%;
+  padding-top: 0px;
+  padding-bottom: 0%;
+  margin-bottom: 1px;
 }
 
 
@@ -103,8 +106,9 @@ input.numsearch {
 }
 
 .col-sm-6 {
-  padding-top: 16%;
+  padding-top: 8%;
   text-align: left;
+  padding-left: 3%;
 }
 
 button.btn.btn-primary.btn-block.btn-lg {
@@ -127,6 +131,9 @@ p.itsfree {
   color: white;
   font-family: 'Rubik', sans-serif;
   padding-left: 8%;
+  font-size: 15px;
+  padding-right: 21px;
+  padding-bottom: 31px;
 }
 
 .submit {
@@ -144,6 +151,34 @@ h3 {
   color: white;
 }
 
+form {
+  margin-left: 30%;
+}
+
+.col-sm-6.content {
+  margin: -3%;
+}
+
+.input-group.mb-3.signup{
+  margin-top: -14%;
+  margin-left: 30%;
+}
+
+h3.signintosearch{
+  font-size: 20px;
+}
+
+button.btn.btn-primary.submit {
+  margin-left: 32%;
+}
+
+h3.signintosearch{
+  padding-left: 6px;
+}
+
+form.signinform {
+  margin-top: 21%;
+}
 /* social media icon styling */
 
 *{
