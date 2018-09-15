@@ -8,8 +8,39 @@
   <title>Home Page</title>
 </head>
 
-<body>
-  {{{body}}}
+<body class="mainbody">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand navheading" href="/">KEEP IN TOUCH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">SIGN UP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">SIGN IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/settings">SETTINGS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h1 class="heading">keep in touch.</h1>
+    <h3 class="tagline">enter a phone number below to connect on all social platforms with a single click</h3>
+  </div>
+
+  <div class="col-sm-6 content">
+    {{{body}}}
+  </div>
+</div>
+
 </body>
 
 </html>
