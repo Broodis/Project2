@@ -53,10 +53,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: {
-          args: 10,
-          msg: "Please enter a valid phone number"
-        }
+        min: 9
       }
     },
     age: {

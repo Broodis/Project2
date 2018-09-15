@@ -3,10 +3,11 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Users.findAll({}).then(function(keepInTouch) {
+
+    db.Users.findAll({}).then(function(dbUsers) {
       res.render("index", {
         msg: "Welcome!",
-        examples: keepInTouch
+        users: dbUsers
       });
     });
   });
@@ -31,11 +32,11 @@ module.exports = function(app) {
       res.render("settings");
     });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Users.findOne({ where: { id: req.params.id } }).then(function(keepInTouch) {
+  // Load results page and pass in an example by phone number
+  app.get("/user/:phoneNumber", function(req, res) {
+    db.Users.findOne({ where: { phoneNumber: req.params.phoneNumber } }).then(function(dbUsers) {
       res.render("example", {
-        example: keepInTouch
+        users: dbUsers
       });
     });
   });
