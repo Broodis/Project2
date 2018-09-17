@@ -3,19 +3,47 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+<<<<<<< HEAD
     db.Example.findAll({}).then(function(dbUsers) {
       res.render("index", {
         msg: "Welcome!",
         examples: dbUsers
+=======
+
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.render("index", {
+        msg: "Welcome!",
+        users: dbUsers
+>>>>>>> a73b796805488f86d16d2f9c5eec8ae3cbcee575
       });
     });
   });
+ //Loads the signup page 
+  app.get("/signup", function(req, res) {
+      res.render("signup");
+    });
+  
+    app.get("/socials", function(req, res) {
+      res.render("socials");
+    });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    app.get("/login", function(req, res) {
+      res.render("login");
+    });
+
+    app.get("/", function(req, res) {
+      res.render("index");
+    });
+
+    app.get("/settings", function(req, res) {
+      res.render("settings");
+    });
+
+  // Load results page and pass in an example by phone number
+  app.get("/user/:phoneNumber", function(req, res) {
+    db.Users.findOne({ where: { phoneNumber: req.params.phoneNumber } }).then(function(dbUsers) {
       res.render("example", {
-        example: dbExample
+        users: dbUsers
       });
     });
   });
