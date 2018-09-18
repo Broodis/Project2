@@ -7,7 +7,7 @@
 }
 
 .signup1 {
-  font-size: 80px;
+  font-size: 71px;
   margin-left: 0%;
 }
 
@@ -155,7 +155,7 @@ form {
   margin-left: 30%;
 }
 
-.col-sm-6.content {
+.content {
   margin: -3%;
 }
 
@@ -179,6 +179,12 @@ h3.signintosearch{
 form.signinform {
   margin-top: 21%;
 }
+
+.footer {
+  margin-top: 10%;
+  
+}
+
 /* social media icon styling */
 
 *{
@@ -197,7 +203,9 @@ body {
   padding: 0;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 104%;
+  font-size: 23px;
+  margin-bottom: 55%;
 }
 
 i {
@@ -253,5 +261,3 @@ i {
   text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
   transform: translate(0, -8);
 }
-
-

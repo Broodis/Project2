@@ -27,8 +27,8 @@ module.exports = function(app) {
       res.render("index");
     });
 
-    app.get("/settings", function(req, res) {
-      res.render("settings");
+    app.get("/signup2", function(req, res) {
+      res.render("signup2");
     });
 
   // Load example page and pass in an example by id
