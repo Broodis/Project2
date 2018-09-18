@@ -9,6 +9,12 @@ var $emailAddress = $("#emailAddress");
 var $password = $("#password");
 var $confirmPassword = $("#confirmPassword");
 var $signUpButton = $("#signUpButton");
+// socials page references
+var $facebook = $(".facebookEntry");
+var $instagram = $(".instagramEntry");
+var $twitter = $(".twitterEntry");
+var $snapchat = $(".snapchatEntry");
+var $addSocials = $(".addSocialsBtn");
 // login/sign-in page references
 var $signInNum = $("#signInNum");
 var $signInPass = $("#signInPass");
@@ -20,16 +26,37 @@ var $signInPass = $("#signInPass");
 
 // API Object
 var API = {
-  saveNewUser: function()
-}
+  saveNewUser: function() {
+
+  },
+  getSocials: function() {
+
+  },
+};
 
 
 // handleFormSubmit is called when a new user signs up for the app
 // Save the new user's info to the db and then refresh
-var handleFormSubmit = function(event) {
+var saveNewUser = function(event) {
     event.preventDefault();
 
     var user = {
-        firstName: ,
+        firstName: $firstName.val().trim(),
+        lastName: $lastName.val().trim(),
+        email: placeholder.val().trim(),
+        password: placeholder.val().trim(),
+        confirmPassword: placeholder.val().trim(),
+        phoneNumber: placeholder.val().trim(),
+        age: placeholder.val().trim(),
+        gender: placeholder.val().trim(),
+        // socials
+        facebook: placeholder.val().trim(),
+        twitter: placeholder.val().trim(),
+        instagram: placeholder.val().trim(),
+        snapchat: placeholder.val().trim(),
     };
+
+    if (!(user.firstName && user.lastName && user.email && user.password)) {
+
+    }
 };
