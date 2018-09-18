@@ -49,26 +49,25 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     },
-    phoneNumber: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        min: 9
-      }
-    },
-    age: {
-      type: DataTypes.INTEGER,
+    confirmPassword: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: {
-          args: [2, 3]
+          args: [6, 128],
+          msg: "Password must be at least 6 characters in length"
         }
       }
     },
-    gender: {
+    phoneNumber: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+      isNumeric: true,
+      validate: {
+        min: 10,
+        max: 10
+      }
+    },
   });
   return Users;
 };
