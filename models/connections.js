@@ -10,13 +10,13 @@ var connection = mysql.createPool ({
     database: 'keepInTouch'
 });
 
-connection.connect(function(error) {
+/*connection.connect(function(error) {
     if (!!error) {
         console.log('Error');
     } else {
         console.log('Connected');
     }
-});
+});*/
 
 app.get('/', function(req, res) {
     connection.getConnection(function(error, tempCont) {
