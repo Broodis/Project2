@@ -4,9 +4,8 @@ $(function() {
 
         console.log('clicked');
         
-    $.ajax("/api/users/search", {
+    $.ajax("/api/search/" + $("#searchInput").val(), {
         type: "POST",
-        data: { phone: $("#searchInput").val() },
     }).then(function(response) {
             if(response) {
                 // window.touch.href="/socials/"
