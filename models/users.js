@@ -82,5 +82,18 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
     },
   });
+
+  
+  /**
+   * Declare a function on each instance of a user record
+   * that accepts a password and compares it to the password of the user record itself
+   * 
+   * @param {string} password 
+   * @return {boolean}
+   */
+  Users.prototype.verifyPassword = function(password) {
+    return password === this.password;
+  }
+
   return Users;
 };
