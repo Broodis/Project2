@@ -62,7 +62,6 @@ module.exports = function (app) {
   app.get('/logout', function(req, res) {
     // Best way to log out is to destroy the session
     req.session.destroy(function() {
-      console.log('hello?');
       // Once it's destroyed, redirect to the homepage
       res.redirect('/');
     })
