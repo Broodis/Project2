@@ -1,3 +1,4 @@
+console.log('index.js');
 // home page (search bar) references
 var $searchInput = $("#searchInput");
 var $searchSubmit = $("#searchSubmit");
