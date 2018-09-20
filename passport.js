@@ -5,7 +5,12 @@ var db = require("./models");
 
 // Prepare Authentication Strategy Declaration
 // This stratgey is ran when there is an attempt to authenticate
-var authenticationStrategy = new LocalStrategy( function(email, password, doneCallback) {
+var authenticationStrategy = new LocalStrategy( 
+    {
+        usernameField: 'email',
+        passwordField: 'password'
+    }, 
+    function(email, password, doneCallback) {
     // In the strategy, we look up a user in the DB that matches this email
     // The way we trigger success or failure is by using the `doneCallback` argument passed to us.
     // This `doneCallback` argument is a function we call.
@@ -13,11 +18,9 @@ var authenticationStrategy = new LocalStrategy( function(email, password, doneCa
     // If the first argument is null, and a user object is passed then no error happened and the authentication was successful
     // If the first argument is a string then this will be treated like an error occurred
     // If no user was found, then we pass null for the error but false for the second parameter,
-    db.Users.findOne({where: { email: email }}, function (err, user) {
-      // If there was a problem
-      if (err) { 
-        return doneCallback(err);
-      }
+    db.Users.findOne({where: { email: email }})
+    .then(function(user) {
+     
       // If no user was found
       if (!user) { 
         return doneCallback(null, false); 
@@ -28,6 +31,9 @@ var authenticationStrategy = new LocalStrategy( function(email, password, doneCa
       }
       // If all other checks passed, we successfully logged in
       return doneCallback(null, user);
+    }).catch(function(err) {
+         // If there was a problem
+        return doneCallback(err)
     });
 })
   
@@ -43,18 +49,23 @@ passport.use(authenticationStrategy);
 // serializing, and querying the user record by ID from the database when
 // deserializing.
 passport.serializeUser(function(user, callback) {
-// we pass null for the first argument (error), and the user id for the second argument
-callback(null, user.id)
+    // we pass null for the first argument (error), and the user id for the second argument
+    callback(null, user.id)
 })
 
 passport.deserializeUser(function(id, callback) {
+    console.log("Deserializing user");
     // Find the first user by id
     db.Users.findById(id).then(function(foundUser) {
+        console.log("Found user");
+        console.log(foundUser.get({plain: true}));
         // User wasn't found? 
         if (!foundUser) {
             return callback(null, false);
         }
         // We found that user? Great, send it back!
+        console.log("Calling back with found user");
+        console.log(foundUser.get({plain: true}))
         callback(null, foundUser.get({plain: true}));
     }).catch(function(err) {
         // We had an error? 

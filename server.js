@@ -54,10 +54,10 @@ app.use(passport.session());
 // By using the `res.locals` object, the variable is immediately available to the handlebars templates in every authenticated call
 app.use(function(req, res, next) {
   console.log("Template middleware called");
-  // If there's a user, set it down
+  // If there's a user, set it down to handlebars under `authenticatedUser`
   if (req.user) {
     console.log("User being set");
-    res.locals.user = req.user; 
+    res.locals.authenticatedUser = req.user; 
   }
   next();
 });
