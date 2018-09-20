@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": " ",
+=======
+    "password": "",
+>>>>>>> f88146ecb9ff21d054b31806c776e486b86dcb03
     "database": "keepInTouch",
     "host": "localhost",
     "dialect": "mysql"

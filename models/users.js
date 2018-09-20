@@ -25,6 +25,11 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     },
+    phoneNumber: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isNumeric: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -59,14 +64,22 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     },
-    phoneNumber: {
+    // start socials columns
+    facebook: {
       type: DataTypes.STRING,
-      allowNull: false,
-      isNumeric: true,
-      validate: {
-        min: 10,
-        max: 10
-      }
+      allowNull: true,
+    },
+    twitter: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    snapchat: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   });
   return Users;

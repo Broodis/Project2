@@ -3,6 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all users
   app.get("/api/users", function(req, res) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f88146ecb9ff21d054b31806c776e486b86dcb03
     db.Users.findAll({}).then(function(dbUsers) {
       res.json(dbUsers);
     });
@@ -10,8 +14,12 @@ module.exports = function(app) {
 
   // Create a new user
   app.post("/api/users", function(req, res) {
+<<<<<<< HEAD
+=======
+    console.log(req.body);
+>>>>>>> f88146ecb9ff21d054b31806c776e486b86dcb03
     db.Users.create(req.body).then(function(dbUsers) {
-      res.json(dbUsers);
+      res.redirect("/login");
     });
   });
 
