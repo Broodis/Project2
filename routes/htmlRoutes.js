@@ -8,8 +8,16 @@ module.exports = function (app) {
     res.render("signup");
   });
 
-  app.get("/socials", function (req, res) {
-    res.render("socials");
+  app.get("/signup2", function (req, res) {
+    res.render("signup2");
+  });
+
+  app.get("/socials/:id", function (req, res) {
+    db.Users.findOne({ where: { id: req.params.id } }).then(function (foundUser) {
+      res.render("socials", {
+        user: foundUser
+      });
+    });
   });
 
   app.get("/signup2", function (req, res) {
@@ -26,15 +34,6 @@ module.exports = function (app) {
 
   app.get("/settings", function (req, res) {
     res.render("settings");
-  });
-
-  // Load results page and pass in an example by phone number
-  app.get("/user/:phoneNumber", function (req, res) {
-    db.Users.findOne({ where: { phoneNumber: req.params.phoneNumber } }).then(function (dbUsers) {
-      res.render("example", {
-        users: dbUsers
-      });
-    });
   });
 
   // Render 404 page for any unmatched routes

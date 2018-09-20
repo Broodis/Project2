@@ -48,8 +48,6 @@ var saveNewUser = function(event) {
         password: placeholder.val().trim(),
         confirmPassword: placeholder.val().trim(),
         phoneNumber: placeholder.val().trim(),
-        age: placeholder.val().trim(),
-        gender: placeholder.val().trim(),
         // socials
         facebook: placeholder.val().trim(),
         twitter: placeholder.val().trim(),

@@ -5,14 +5,14 @@ module.exports = function(app) {
   app.get("/api/users", function(req, res) {
     db.Users.findAll({}).then(function(dbUsers) {
       res.json(dbUsers);
+      res.redirect("/signup2");
     });
   });
 
   // Create a new user
   app.post("/api/users", function(req, res) {
-    console.log(req.body);
     db.Users.create(req.body).then(function(dbUsers) {
-      res.redirect("/login");
+      res.redirect("/signup2");
     });
   });
 
@@ -22,4 +22,13 @@ module.exports = function(app) {
       res.json(dbUsers);
     });
   });
-};
+// Search experince for the user
+app.post("/api/search/:phone", function(req, res) {
+    db.User.findOneby(req.params.phone);
+    if (phone == null || phone == 'undefined') {
+      res.status(404);
+    } else {
+      res.json(phone);
+    }
+  });
+}
