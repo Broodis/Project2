@@ -25,6 +25,11 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     },
+    phoneNumber: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isNumeric: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -49,29 +54,33 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     },
-    phoneNumber: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: {
-          args: 10,
-          msg: "Please enter a valid phone number"
-        }
-      }
-    },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: {
-          args: [2, 3]
-        }
-      }
-    },
-    gender: {
+    confirmPassword: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+      validate: {
+        len: {
+          args: [6, 128],
+          msg: "Password must be at least 6 characters in length"
+        }
+      }
+    },
+    // start socials columns
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    twitter: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    snapchat: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   });
   return Users;
 };
