@@ -65,19 +65,19 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     // start socials columns
-    facebook: {
+    facebookEntry: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    twitter: {
+    twitterEntry: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    instagram: {
+    instagramEntry: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    snapchat: {
+    snapchatEntry: {
       type: DataTypes.STRING,
       allowNull: true,
     },
