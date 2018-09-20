@@ -15,7 +15,8 @@ module.exports = function (app) {
   app.get("/socials/:id", function (req, res) {
     db.Users.findOne({ where: { id: req.params.id } }).then(function (foundUser) {
       res.render("socials", {
-        user: foundUser
+        user: foundUser,
+        layout: 'dashboard'
       });
     });
   });

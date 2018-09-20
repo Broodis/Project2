@@ -24,11 +24,10 @@ module.exports = function(app) {
   });
 // Search experince for the user
 app.post("/api/search/:phone", function(req, res) {
-    db.User.findOneby(req.params.phone);
-    if (phone == null || phone == 'undefined') {
-      res.status(404);
-    } else {
-      res.json(phone);
-    }
+    db.Users.findOne({where: {phoneNumber: req.params.phone}}).then(function(foundUser) {
+      res.json(foundUser);
+    }).catch(function(err) {
+      res.sendStatus(500);
+    });
   });
 }
