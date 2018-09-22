@@ -93,7 +93,7 @@ p.small.text-center {
 
 .mainbody{
     background-image: url("https://www.tapmango.com/wp-content/uploads/2017/10/gradient-background.jpg");
-}
+  }
 
 button#button-addon2 {
   background-image: linear-gradient(to right, rgb(187, 24, 135) , purple);
@@ -159,13 +159,117 @@ form {
   margin: -3%;
 }
 
-.input-group.mb-3.signup{
+.input-group.mb-3.signup {
   margin-top: -14%;
   margin-left: 30%;
 }
 
-h3.signintosearch{
+h3.signintosearch {
   font-size: 20px;
+}
+
+#searchSubmit {
+  padding: 5%;
+  margin-left: 15%;
+  width: 120%;
+}
+
+#dashSearchSubmit {
+  padding: 5%;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 10%;
+}
+
+#dashSearchInput {
+  padding: 5%;
+  width: 300%;
+  margin-left: -90%;
+  text-align: center;
+}
+
+.vl {
+  border-left: 5px solid black;
+  height: 175%;
+  position: absolute;
+  left: 10%;
+  margin-left: -3px;
+  top: 10%;
+}
+
+.vl1 {
+  border-left: 5px solid black;
+  height: 175%;
+  position: absolute;
+  right: 10%;
+  margin-left: -3px;
+  top: 10%;
+}
+
+#dashRecents {
+
+}
+
+#firstNameColor {
+  color: black;
+  margin-top: 0%;
+  margin-left: 0%;
+  padding: 0%;
+}
+
+#socialsDesc {
+  margin: 11%;
+  margin-bottom: 0%;
+}
+
+#socialsBlock {
+  margin-top: 50%;
+}
+
+.dashboardHeading1 {
+  color: black;
+  padding-left: 100%;
+  padding-bottom: 0px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  font-size: 80px;
+}
+
+.dashboardHeading {
+  padding-left: 0%;
+  padding-bottom: 0px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 80px;
+}
+
+#withText {
+  margin-bottom: 0%;
+  padding: 0%;
+}
+
+#searchBarGroup {
+  margin-top: 40%;
+}
+
+#dashSearchBarGroup {
+  margin: auto;
+}
+
+#dashContain {
+  margin-left: 20%;
+}
+
+#signupContainer {
+  margin-top: 10%;
+}
+
+#loginGroup {
+  margin-top: 35%;
+}
+.signinform {
+  width: 120%;
 }
 
 button.btn.btn-primary.submit {
@@ -181,7 +285,13 @@ form.signinform {
 }
 
 .footer {
-  margin-top: 10%;
+  margin-top: 45%;
+  position: fixed;
+    left: 0;
+    bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1%;
 }
 
 /* social media icon styling */

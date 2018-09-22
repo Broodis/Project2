@@ -1,14 +1,27 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+
 <div class="container">
   <div class="container">
     <div class="row">
-      <h2>{{user.firstName}}</h2>
-      <p>SOcial Facebook {{user.facebookEntry}}</p>
       <ul>
-        <div class="wrapper socialicon">
-          <i class="fa fa-5x fa-facebook-square"></i>
-          <i class="fa fa-5x fa-twitter-square"></i>
-          <i class="fa fa-5x fa-instagram"></i>
-          <i class="fa fa-5x fa-snapchat-square"></i>
+        <div id="socialsBlock">
+          <h2 id="socialsDesc" class="itsfree">check out {{user.firstName}}'s socials</h2>
+          <hr>
+          <div class="wrapper socialicon">
+            <a href="{{user.facebookEntry}}" target="_blank">
+              <i style="color: #3b5998" class="fa fa-5x fa-facebook-square"></i>
+            </a>
+            <a href="{{user.twitterEntry}}" target="_blank">
+              <i style="color: #1da1f2" class="fa fa-5x fa-twitter-square"></i>
+            </a>
+            <a href="{{user.instagramEntry}}" target="_blank">
+              <i style="color: #ffdc80" class="fa fa-5x fa-instagram"></i>
+            </a>
+            <a href="{{user.snapchatEntry}}" target="_blank">
+              <i style="color: #25d366" class="fa fa-5x fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
       </ul>
     </div>
